@@ -1,0 +1,77 @@
+body.newsletter-active .logo-wrapper {
+	@include respond-to('sm-p') { z-index: 103; }
+}
+.main-header {
+	position: fixed;
+	top: 0;
+	z-index: 1000;
+	background-color: $white;
+
+	.bot {
+		height: 30px;
+		line-height: 30px;
+	}
+
+	.top {
+		position: relative;
+		text-align: center;
+		&:before {
+			content: '';
+			display: inline-block;
+			height: 100%;
+			vertical-align: middle;
+		}
+	}
+
+	.menu-trigger-wrapper {
+		cursor: pointer;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		height: 24px;
+		z-index: 101;
+	}
+
+	.logo-wrapper {
+		position: relative;
+		display: inline-block;
+	}
+
+	.social-btn {
+		color: $grey;
+	}
+
+	.header-social-btns {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	@include respond-to('xs') {
+		left: 15px;
+		right: 15px;
+
+		.top {
+			height: 80px;
+		}
+
+		.logo {
+			max-width: 150px;
+		}
+
+		.header-social-btns {
+			display: none;
+		}
+
+	}
+	@include respond-to('sm-p') {
+		left: 40px;
+		right: 40px;
+
+		.top {
+			height: 100px;
+		}
+	}
+}

@@ -1,0 +1,36 @@
+.red-link {
+	color: $red;
+	&:hover{ color: $red-l-5; }
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: inherit;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: inherit;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: inherit;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: inherit;
+}
+.red {
+	&-c { color: $red; }
+	&-bg { background-color: $red; }
+	&-bd { border-color: $red; }
+}
+.grey {
+	&-c { color: $grey; }
+	&-bg { background-color: $grey; }
+	&-bd { border-color: $grey; }
+}
+.dark-grey {
+	&-c { color: $dark-grey; }
+	&-bg { background-color: $dark-grey; }
+	&-bd { border-color: $dark-grey; }
+}
+.light-grey {
+	&-c { color: $light-grey; }
+	&-bg { background-color: $light-grey; }
+	&-bd { border-color: $light-grey; }
+}

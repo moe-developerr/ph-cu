@@ -1,0 +1,38 @@
+// screen sizes
+$screen-xs-max: 767px;
+$screen-sm-min: 768px;
+$screen-sm-max: 991px;
+$screen-md-min: 992px;
+$screen-md-max: 1199px;
+$screen-lg-min: 1200px;
+
+// fonts
+$body-ff: 'Gotham', verdana, sans-serif;
+$heading-ff: 'Dancing Script', cursive;
+
+$body-fz: 13px;
+$sm-fz: 12px;
+
+$lg-fz: 3em;
+$h1-fz: 2em;
+$h2-fz: 1.5em;
+$h3-fz: 1.17em;
+$h4-fz: 1em;
+$h5-fz: 0.83em;
+$h6-fz: 0.67em;
+
+// colors
+$red: #911f10;
+$red-l-5: lighten($red, 5%);
+$dark-grey: #7b6e69;
+$grey: #a89994;
+$light-grey: #e9e7e7;
+$white: #ffffff;
+
+// constant
+$sm-c: 5px;
+$c: 15px;
+
+// transition
+$s-t: .6s;
+$f-t: .3s;

@@ -1,0 +1,47 @@
+.ticker {
+	overflow: hidden;
+	background-color: $white;
+	position: relative;
+	height: 30px;
+
+	.track,
+	.feed,
+	.feed-text { height: 100%; }
+
+	.track {
+		width: 10000px;
+		float: right;
+		text-align: right;
+		// transform: translateX(100%);
+		// position: absolute;
+		// left: 100%;
+		// text-align: left;
+		// animation-name: marquee;
+		// animation-duration: 10s;
+		// animation-delay: 0;
+		// animation-play-state: running;
+		// animation-timing-function: linear;
+		// animation-iteration-count: 1;
+		// &:hover {
+		// 	animation-play-state: paused;
+		// }
+	}
+
+	.feed {
+		color: $red;
+		text-align: right;
+		&,
+		&-text {
+			display: inline-block;
+		}
+	}
+}
+// @keyframes marquee {
+// 	0% {
+// 		transform: translate(100%);
+// 	}
+
+// 	100% {
+// 		transform: translate(-100%);
+// 	}
+// }

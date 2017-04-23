@@ -1,0 +1,44 @@
+.experience {
+	text-align: center;
+	.page-title {
+		color: $red;
+		margin: 45px 0;
+	}
+	.title { color: $red; }
+	.dashed-text {
+		border: 1px dashed $red;
+		display: inline-block;
+		padding: 15px 45px;
+		font-style: italic;
+		.text { color: $grey; }
+		.text p { margin-bottom: 0; }
+	}
+	.btn-red-link {
+		@extend %bg-animation-s;
+		background-color: rgba($red, 0.8);
+		color: $white;
+		padding: 10px 45px;
+		border: 3px solid $red;
+		display: block;
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+		line-height: 1.5;
+		&:hover { background-color: rgba($red, 1); }
+	}
+	.body-social-btns {
+		margin-top: 10px;
+		.social-btn { color: $grey; }
+	}
+	@include respond-to('xs') {
+		.even-float {
+			margin-top: 15px;
+		}
+	}
+	@include respond-to('sm-p') {
+		.even-float {
+			width: 50%;
+			float: left;
+		}
+	}
+}

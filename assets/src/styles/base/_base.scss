@@ -1,0 +1,44 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: $body-ff;
+	font-size: $body-fz;
+	color: $dark-grey;
+	-webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $heading-ff;
+	font-weight: 700;
+	margin: 0;
+}
+
+a {
+	@extend %color-animation-s;
+	text-decoration: none;
+}
+
+input,
+button,
+select,
+textarea {
+	font-family: $body-ff;
+	outline: none;
+}
+
+button {
+	@extend %color-animation-s;
+	cursor: pointer;
+}
+
+.page-title {
+	@include respond-to('xs') { font-size: 1em; }
+	@include respond-to('sm-p') { font-size: 1.5em; }
+}

@@ -1,0 +1,43 @@
+.main-menu {
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+	background-color: $light-grey;
+	padding: 130px 39px 0;
+	overflow-y: auto;
+	z-index: 100;
+	transform: translateX(-100%);
+	transition: transform $s-t;
+
+	&.active { transform: translateX(0); }
+
+	.menu-title {
+		color: $red;
+		margin-bottom: 20px;
+	}
+
+	.menu-section {
+		margin-bottom: 30px;
+	}
+
+	.menu-list {
+		list-style-type: none;
+		padding-left: 0;
+		margin: 0;
+	}
+
+	.menu-link {
+		@extend %sliding-border;
+		color: $dark-grey;
+		text-transform: uppercase;
+		margin-bottom: 5px;
+		display: inline-block;
+		overflow: hidden;
+	}
+
+	@include respond-to('xs') {
+	}
+	@include respond-to('sm-p') {
+	}
+}

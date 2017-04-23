@@ -1,0 +1,62 @@
+body.newsletter-active .newsletter {
+	transform: translateY(0);
+}
+
+.newsletter {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 102;
+	background-color: rgba($white, 0.9);
+	overflow-y: auto;
+	transition: transform $s-t;
+	transform: translateY(-100%);
+
+	.container {
+		max-width: 900px;
+	}
+
+	.row {
+		@extend .clearfix;
+		overflow: visible;
+	}
+		
+	.thankyou {
+		color: $red;
+		margin-top: 10px;
+	}
+
+	&-submit {
+		margin-top: 10px;
+		text-align: center;
+		.cu-btn {
+			padding-left: 45px;
+			padding-right: 45px;
+		}
+	}
+
+	&-title {
+		color: $red;
+		text-align: center;
+		margin-bottom: 45px;
+		@include respond-to('xs') { font-size: 1em; }
+		@include respond-to('sm-p') { font-size: 1.5em; }
+	}
+
+	&-header {
+		cursor: pointer;
+		height: 26px;
+		width: 36px;
+		position: absolute;
+		top: 37px;
+		right: 40px;
+		.close { height: 100%; }
+	}
+	@include respond-to('xs') { padding-top: 110px; }
+	@include respond-to('sm-p') {
+		padding-top: 130px;
+		&-title { margin-top: 45px; }
+	}
+}

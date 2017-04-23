@@ -1,0 +1,14 @@
+%color-animation {
+	&-s { transition: color $s-t; }
+	&-t { transition: color $f-t; }
+}
+
+%bg-animation {
+	&-s { transition: background-color $s-t; }
+	&-t { transition: background-color $f-t; }
+}
+
+%bd-animation {
+	&-s { transition: border-color $s-t; }
+	&-t { transition: border-color $f-t; }
+}

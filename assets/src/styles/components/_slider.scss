@@ -1,0 +1,91 @@
+.tall-slider {
+	@include respond-to('xs') { height: 350px; }
+	@include respond-to('sm-p') { height: 550px; }
+}
+.short-slider {
+	@include respond-to('xs') { height: 300px; }
+	@include respond-to('sm-p') { height: 450px; }
+}
+.main-slider {
+	position: relative;
+	&,
+	& .rsOverflow,
+	& .rsSlide,
+	& .rsVideoFrameHolder,
+	& .rsThumbs {
+		background-color: $white;
+	}
+	&.rsHor .rsArrow .rsArrowIcn {
+		width: 70px;
+		height: 70px;
+		margin-top: -35px;
+		background: none;
+		&:before,
+		&:after {
+			content: '';
+			width: 2px;
+			height: 40px;
+			display: block;
+			position: absolute;
+			top: 50%;
+			background-color: $white;
+		}
+	}
+	&.rsHor .rsArrowLeft .rsArrowIcn {
+		margin-left: -22px;
+		&:before {
+			transform: rotate(-45deg) translate(39px, 28px);
+		}
+		&:after {
+			transform: rotate(45deg) translate(8px, -58px);
+		}
+	}
+	&.rsHor .rsArrowRight .rsArrowIcn {
+		margin-left: -48px;
+		&:before {
+			transform: rotate(-45deg) translate(38px, -11px);
+		}
+		&:after {
+			transform: rotate(45deg) translate(9px, -18px);
+		}
+	}
+	&.hide-caption .rsGCaption { display: none; }
+	.rsGCaption {
+		padding: 0;
+		text-align: center;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: transparent;
+	}
+	.rsLink {
+		color: $white;
+		text-transform: uppercase;
+		transition: background-color $s-t;
+		font-size: $h1-fz;
+		&:hover {
+			background-color: rgba($red, .8);
+		}
+		.center-text {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			padding-bottom: 3px;
+			border-bottom: 3px solid #fff;
+		}
+	}
+
+	@include respond-to('xs') {
+		&:first-of-type { padding-bottom: 1px; }
+		&:last-of-type { padding-top: 1px; }
+	}
+	@include respond-to('sm-p') {
+		float: left;
+		width: 50%;
+		&:first-of-type { padding-right: 1px; }
+		&:last-of-type { padding-left: 1px; }
+	}
+}

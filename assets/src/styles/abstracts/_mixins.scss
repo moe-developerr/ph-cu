@@ -1,0 +1,15 @@
+@mixin respond-to($screen) {
+	@if $screen == 'xs' { @media screen and (max-width: $screen-xs-max) { @content; } }
+	@else if $screen == 'sm' { @media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { @content; } }
+	@else if $screen == 'md' { @media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) { @content; } }
+	@else if $screen == 'lg' { @media screen and (min-width: $screen-lg-min) { @content; } }
+	@else if $screen == 'sm-p' { @media screen and (min-width: $screen-sm-min) { @content; } }
+	@else if $screen == 'md-p' { @media screen and (min-width: $screen-md-min) { @content; } }
+	@else if $screen == 'sm-to-md' { @media screen and (min-width: $screen-sm-min) and (max-width: $screen-md-max) { @content; } }
+	@else if $screen == 'upto-sm' { @media screen and (max-width: $screen-sm-max) { @content; } }
+	@else if $screen == 'upto-md' { @media screen and (max-width: $screen-md-max) { @content; } }
+}
+
+@mixin d($selector) { &-#{$selector} { @content; } }
+@mixin e($selector) { &__#{$selector} { @content; } }
+@mixin m($selector) { &--#{$selector} { @content; } }

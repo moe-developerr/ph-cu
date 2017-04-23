@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700');
+@font-face {
+	font-family: 'Gotham';
+ 	src: url('../../fonts/gotham-light-webfont.eot');
+  	src: local('../../fonts/gotham-light-webfont'), 
+	     url('../../fonts/gotham-light-webfont.woff') format('woff'), 
+    	 url('../../fonts/gotham-light-webfont.ttf') format('truetype'), 
+	     url('../../fonts/gotham-light-webfont.svg') format('svg');
+	font-weight: 200;
+}
+
+@font-face {
+	font-family: 'Gotham';
+ 	src: url('../../fonts/gotham-book-webfont.eot');
+  	src: local('../../fonts/gotham-book-webfont'), 
+	     url('../../fonts/gotham-book-webfont.woff') format('woff'), 
+    	 url('../../fonts/gotham-book-webfont.ttf') format('truetype'), 
+	     url('../../fonts/gotham-book-webfont.svg') format('svg');
+    font-weight: 400;	
+}
+
+@font-face {
+	font-family: 'Gotham';
+ 	src: url('../../fonts/gotham-medium-webfont.eot');
+  	src: local('../../fonts/gotham-medium-webfont'), 
+	     url('../../fonts/gotham-medium-webfont.woff') format('woff'), 
+    	 url('../../fonts/gotham-medium-webfont.ttf') format('truetype'), 
+	     url('../../fonts/gotham-medium-webfont.svg') format('svg');
+    font-weight: 700;	
+}
+
+@font-face {
+	font-family: 'Gotham';
+ 	src: url('../../fonts/gotham-black-webfont.eot');
+  	src: local('../../fonts/gotham-black-webfont'), 
+	     url('../../fonts/gotham-black-webfont.woff') format('woff'), 
+    	 url('../../fonts/gotham-black-webfont.ttf') format('truetype'), 
+	     url('../../fonts/gotham-black-webfont.svg') format('svg');
+    font-weight: 900;
+}

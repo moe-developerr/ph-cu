@@ -1,0 +1,9 @@
+.site-wrapper {
+	@include respond-to('xs') {
+		padding: 110px 15px 0;
+	}
+
+	@include respond-to('sm-p') {
+		padding: 130px 40px 0;
+	}
+}

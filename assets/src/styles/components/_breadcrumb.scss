@@ -1,0 +1,45 @@
+.breadcrumb {
+	&-link {
+		position: relative;
+		color: $grey;
+		text-transform: uppercase;
+	}
+	.left {
+		float: left;
+		.breadcrumb-link {
+			padding-left: 20px;
+			&:before,
+			&:after {
+				content: '';
+				width: 10px;
+				height: 1px;
+				background-color: $grey;
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			&:before { transform: rotate(45deg) translate(5px, 0px); }
+			&:after { transform: rotate(-45deg) translate(5px, 0px); }
+		}
+	}
+	.right {
+		float: right;
+		.breadcrumb-link {
+			padding-right: 20px;
+			&:before,
+			&:after {
+				content: '';
+				width: 10px;
+				height: 1px;
+				background-color: $grey;
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			&:before { transform: rotate(45deg) translate(-5px, 0px); }
+			&:after { transform: rotate(-45deg) translate(-5px, 0px); }
+		}
+	}
+}

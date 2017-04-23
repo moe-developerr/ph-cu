@@ -1,0 +1,261 @@
+%bgc {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.clearfix {
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+.img-responsive {
+	display: inline-block;
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+
+.row {
+	position: relative;
+	overflow: hidden;
+	.col-sm-6 {
+		@include respond-to('sm-p') {
+			float: left;
+			width: 50%;
+			&:nth-child(odd) { padding-right: $c; }
+			&:nth-child(even) { padding-left: $c; }
+		}
+	}
+}
+
+.d {
+	&-b { display: block; }
+	&-ib { display: inline-block; }
+	&-i { display: inline; }
+}
+
+.fz {
+	&-12 { font-size: 12px; }
+	&-14 { font-size: 14px; }
+	&-16 { font-size: 16px; }
+	&-18 { font-size: 18px; }
+	&-20 { font-size: 20px; }
+	&-22 { font-size: 22px; }
+	&-24 { font-size: 24px; }
+	&-25 { font-size: 25px; }
+	&-3em { font-size: 3em; }
+}
+
+.fw {
+	&-200 { font-weight: 200; }
+	&-400 { font-weight: 400; }
+	&-600 { font-weight: 600; }
+	&-700 { font-weight: 700; }
+}
+
+.lh {
+	&-1 { line-height: 1; }
+	&-1-5 { line-height: 1.5; }
+	&-2 { line-height: 2; }
+}
+
+.m {
+	@include d('5') { margin: $sm-c; }
+	@include d('r5') { margin-right: $sm-c; }
+	@include d('l5') { margin-left: $sm-c; }
+	@include d('t5') { margin-top: $sm-c; }
+	@include d('b5') { margin-bottom: $sm-c; }
+	
+	@include d('10') { margin: 2*$sm-c; }
+	@include d('r10') { margin-right: 2*$sm-c; }
+	@include d('l10') { margin-left: 2*$sm-c; }
+	@include d('t10') { margin-top: 2*$sm-c; }
+	@include d('b10') { margin-bottom: 2*$sm-c; }
+
+	@include d('15') { margin: $c; }
+	@include d('r15') { margin-right: $c; }
+	@include d('l15') { margin-left: $c; }
+	@include d('t15') { margin-top: $c; }
+	@include d('b15') { margin-bottom: $c; }
+
+	@include d('20') { margin: 4*$sm-c; }
+	@include d('r20') { margin-right: 4*$sm-c; }
+	@include d('l20') { margin-left: 4*$sm-c; }
+	@include d('t20') { margin-top: 4*$sm-c; }
+	@include d('b20') { margin-bottom: 4*$sm-c; }
+
+	@include d('25') { margin: 5*$sm-c; }
+	@include d('r25') { margin-right: 5*$sm-c; }
+	@include d('l25') { margin-left: 5*$sm-c; }
+	@include d('t25') { margin-top: 5*$sm-c; }
+	@include d('b25') { margin-bottom: 5*$sm-c; }
+
+	@include d('30') { margin: 2*$c; }
+	@include d('r30') { margin-right: 2*$c; }
+	@include d('l30') { margin-left: 2*$c; }
+	@include d('t30') { margin-top: 2*$c; }
+	@include d('b30') { margin-bottom: 2*$c; }
+	
+	@include d('45') { margin: 3*$c; }
+	@include d('r45') { margin-right: 3*$c; }
+	@include d('l45') { margin-left: 3*$c; }
+	@include d('t45') { margin-top: 3*$c; }
+	@include d('b45') { margin-bottom: 3*$c; }
+
+	@include d('60') { margin: 4*$c; }
+	@include d('r60') { margin-right: 4*$c; }
+	@include d('l60') { margin-left: 4*$c; }
+	@include d('t60') { margin-top: 4*$c; }
+	@include d('b60') { margin-bottom: 4*$c; }
+	
+	@include respond-to('xs') {
+		@include d('b10-xs') { margin-bottom: 2*$sm-c; }
+	}
+}
+
+.p {
+	@include d('5') { padding: $sm-c; }
+	@include d('r5') { padding-right: $sm-c; }
+	@include d('l5') { padding-left: $sm-c; }
+	@include d('t5') { padding-top: $sm-c; }
+	@include d('b5') { padding-bottom: $sm-c; }
+
+	@include d('10') { padding: 2*$sm-c; }
+	@include d('r10') { padding-right: 2*$sm-c; }
+	@include d('l10') { padding-left: 2*$sm-c; }
+	@include d('t10') { padding-top: 2*$sm-c; }
+	@include d('b10') { padding-bottom: 2*$sm-c; }
+
+	@include d('15') { padding: $c; }
+	@include d('r15') { padding-right: $c; }
+	@include d('l15') { padding-left: $c; }
+	@include d('t15') { padding-top: $c; }
+	@include d('b15') { padding-bottom: $c; }
+}
+
+.zero {
+	@include d('m') { margin: 0; }
+	@include d('mt') { margin-top: 0; }
+	@include d('mb') { margin-bottom: 0; }
+	@include d('ml') { margin-left: 0; }
+	@include d('mr') { margin-right: 0; }
+
+	@include d('p') { padding: 0; }
+	@include d('pt') { padding-top: 0; }
+	@include d('pb') { padding-bottom: 0; }
+	@include d('pl') { padding-left: 0; }
+	@include d('pr') { padding-right: 0; }
+}
+
+.hidden {
+	@include d('xs') { @include respond-to('xs') { display: none; } }
+	@include d('smp') { @include respond-to('sm-p') { display: none; } }
+	@include d('uptomd') { @include respond-to('upto-md') { display: none; } }
+}
+
+.center-ib-content {
+	&:before {
+		content: '';
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+	}
+}
+
+.text {
+	&-right { text-align: right; }
+	&-left { text-align: left; }
+	&-center { text-align: center; }
+}
+
+.trapezoid {
+	box-sizing: content-box;
+	border-bottom: 30px solid #c30000;
+	border-left: 30px solid transparent;
+	border-right: 30px solid transparent;
+	height: 0;
+	width: 60px;
+	text-align: center;
+	line-height: 30px;
+}
+
+.selection-disabled {
+	 -webkit-touch-callout: none; /* iOS Safari */
+	    -webkit-user-select: none; /* Safari */
+	     -khtml-user-select: none; /* Konqueror HTML */
+	       -moz-user-select: none; /* Firefox */
+	        -ms-user-select: none; /* Internet Explorer/Edge */
+	            user-select: none; /* Non-prefixed version, currently
+	                                  supported by Chrome and Opera */
+}
+
+.ov {
+	&-h { overflow: hidden; }
+}
+
+.checkbox {
+	display: inline-block;
+	vertical-align: middle;
+	height: 12px;
+	width: 12px;
+	border: 2px solid $white;
+	border-radius: 2px;
+
+	&-filling {
+		display: none;
+		background-color: $white;
+		height: 100%;
+	}
+}
+
+.cu {
+	&-p { cursor: pointer; }
+}
+
+.full-height-col {
+	@include respond-to(xs) {
+		&-xs {
+			padding-bottom: 9999px;
+			margin-bottom: -9999px;
+		}
+	}
+	@include respond-to(sm-p) {
+		&-smp {
+			padding-bottom: 9999px;
+			margin-bottom: -9999px;
+		}
+	}
+}
+
+.ps {
+	@include respond-to('xs') {
+		&-a-xs { position: absolute; }
+	}
+	@include respond-to('sm-p') {
+		&-a-smp { position: absolute; }
+	}
+}
+
+.b {
+	@include respond-to('xs') {
+		&-0-xs { bottom: 0; }
+	}
+	@include respond-to('sm-p') {
+		&-0-smp { bottom: 0; }
+	}
+}
+
+.w {
+	@include respond-to('xs') {
+		&-50perc-xs { width: 50%; }
+	}
+	@include respond-to('sm-p') {
+		&-50perc-smp { width: 50%; }
+	}
+}

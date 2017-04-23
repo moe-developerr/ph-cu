@@ -1,0 +1,28 @@
+.main-footer {
+	@include respond-to('upto-sm') {
+		text-align: center;
+		.center {
+			margin: 10px 0;
+		}
+		.left,
+		.right { margin-bottom: 10px; }
+	}
+	@include respond-to('sm-p') {
+		position: relative;
+		.center {
+			position: absolute;
+			left: 50%;
+			top: 0;
+			transform: translateX(-50%);
+		}
+	}
+	@include respond-to('sm-to-md') {
+		.left-right-wrapper { margin-top: 40px;	}
+	}
+	@include respond-to('md-p') {
+		height: 40px;
+		line-height: 40px;
+		.left { float: left; }
+		.right { float: right; }
+	}
+}
